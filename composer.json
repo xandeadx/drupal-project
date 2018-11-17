@@ -5,7 +5,8 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "drupal/core": "^8.6.3",
-        "webflo/drupal-core-strict": "^8.6.3",
+        "composer/installers": "^1.0.24",
+        "wikimedia/composer-merge-plugin": "^1.4",
         "drupal-composer/drupal-scaffold": "^2.5"
     },
     "minimum-stability": "dev",
