@@ -45,6 +45,12 @@
               ".htaccess": ".htaccess",
               "robots.txt": "robots.txt"
             },
+            "includes": [
+              "modules/README.txt",
+              "profiles/README.txt",
+              "sites/README.txt",
+              "themes/README.txt"
+            ],
             "excludes": [
                 ".htaccess",
                 "robots.txt",
