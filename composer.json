@@ -6,9 +6,7 @@
     "require": {
         "drupal/core": "^8.6.3",
         "webflo/drupal-core-strict": "^8.6.3",
-        "drupal-composer/drupal-scaffold": "^2.5",
-        "drush/drush": "^9.5",
-        "drupal/console": "^1.8"
+        "drupal-composer/drupal-scaffold": "^2.5"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
