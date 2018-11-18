@@ -4,9 +4,8 @@
     "type": "project",
     "license": "GPL-2.0-or-later",
     "require": {
+        "webflo/drupal-core-strict": "^8.6.3",
         "drupal/core": "^8.6.3",
-        "composer/installers": "^1.0.24",
-        "wikimedia/composer-merge-plugin": "^1.4",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drush/drush": "^9.5",
         "drupal/console": "^1.8"
@@ -19,17 +18,7 @@
         "optimize-autoloader": true
     },
     "extra": {
-        "_readme": [
-            "By default Drupal loads the autoloader from ./vendor/autoload.php.",
-            "To change the autoloader you can edit ./autoload.php.",
-            "This file specifies the packages.drupal.org repository.",
-            "You can read more about this composer repository at:",
-            "https://www.drupal.org/node/2718229"
-        ],
         "merge-plugin": {
-            "include": [
-                "core/composer.json"
-            ],
             "recurse": true,
             "replace": false,
             "merge-extra": false
@@ -38,11 +27,10 @@
             "core": ["type:drupal-core"],
             "modules/contrib/{$name}": ["type:drupal-module"],
             "modules/sandbox/{$name}": ["type:drupal-sandbox-module"],
-            "profiles/contrib/{$name}": ["type:drupal-profile"],
-            "themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"],
             "modules/custom/{$name}": ["type:drupal-custom-module"],
-            "themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "profiles/{$name}": ["type:drupal-profile"],
+            "themes/{$name}": ["type:drupal-theme", "type:drupal-custom-theme"],
+            "drush/{$name}": ["type:drupal-drush"],
             "libraries/{$name}": ["type:drupal-library"]
         },
         "drupal-scaffold": {
