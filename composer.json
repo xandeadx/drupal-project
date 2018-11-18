@@ -7,7 +7,9 @@
         "drupal/core": "^8.6.3",
         "composer/installers": "^1.0.24",
         "wikimedia/composer-merge-plugin": "^1.4",
-        "drupal-composer/drupal-scaffold": "^2.5"
+        "drupal-composer/drupal-scaffold": "^2.5",
+        "drush/drush": "^9.5",
+        "drupal/console": "^1.8"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -35,11 +37,13 @@
         "installer-paths": {
             "core": ["type:drupal-core"],
             "modules/contrib/{$name}": ["type:drupal-module"],
+            "modules/sandbox/{$name}": ["type:drupal-sandbox-module"],
             "profiles/contrib/{$name}": ["type:drupal-profile"],
             "themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"],
             "modules/custom/{$name}": ["type:drupal-custom-module"],
-            "themes/custom/{$name}": ["type:drupal-custom-theme"]
+            "themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "libraries/{$name}": ["type:drupal-library"]
         },
         "drupal-scaffold": {
             "initial": {
