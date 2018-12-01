@@ -35,14 +35,15 @@
         },
         "drupal-scaffold": {
             "initial": {
-              ".htaccess": ".htaccess",
-              "robots.txt": "robots.txt"
+                ".htaccess": ".htaccess",
+                "robots.txt": "robots.txt",
+                "sites/development.services.yml": "sites/development.services.yml"
             },
             "includes": [
-              "modules/README.txt",
-              "profiles/README.txt",
-              "sites/README.txt",
-              "themes/README.txt"
+                "modules/README.txt",
+                "profiles/README.txt",
+                "sites/README.txt",
+                "themes/README.txt"
             ],
             "excludes": [
                 ".htaccess",
@@ -67,10 +68,8 @@
         "phpcs": "phpcs --standard=core/phpcs.xml.dist --runtime-set installed_paths $($COMPOSER_BINARY config vendor-dir)/drupal/coder/coder_sniffer --",
         "phpcbf": "phpcbf --standard=core/phpcs.xml.dist --runtime-set installed_paths $($COMPOSER_BINARY config vendor-dir)/drupal/coder/coder_sniffer --"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
-    ]
+    "repositories": [{
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+    }]
 }
