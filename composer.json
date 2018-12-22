@@ -4,6 +4,7 @@
     "type": "project",
     "license": "GPL-2.0-or-later",
     "require": {
+        "composer/installers": "^1.2",
         "webflo/drupal-core-strict": "^8.6.3",
         "drupal/core": "^8.6.3",
         "drupal-composer/drupal-scaffold": "^2.5",
