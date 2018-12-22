@@ -5,6 +5,7 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "webflo/drupal-core-strict": "^8.6.3",
+        "composer/installers": "^v1.5.0",
         "drupal/core": "^8.6.3",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drush/drush": "^9.5",
