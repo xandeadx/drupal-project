@@ -4,12 +4,12 @@
     "type": "project",
     "license": "GPL-2.0-or-later",
     "require": {
-        "webflo/drupal-core-strict": "^8.6.3",
+        "webflo/drupal-core-strict": "^8.6.4",
         "composer/installers": "^v1.5.0",
-        "drupal/core": "^8.6.3",
-        "drupal-composer/drupal-scaffold": "^2.5",
-        "drush/drush": "^9.5",
-        "drupal/console": "^1.8"
+        "drupal/core": "^8.6.4",
+        "drupal-composer/drupal-scaffold": "^2.5.4",
+        "drush/drush": "^9.5.2",
+        "drupal/console": "^1.8.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
