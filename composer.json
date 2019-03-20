@@ -22,7 +22,11 @@
         "merge-plugin": {
             "recurse": true,
             "replace": false,
-            "merge-extra": false
+            "merge-extra": false,
+            "include": [
+                "modules/custom/*/composer.json",
+                "modules/sandbox/*/composer.json"
+            ]
         },
         "installer-paths": {
             "core": ["type:drupal-core"],
