@@ -4,12 +4,12 @@
     "type": "project",
     "license": "GPL-2.0-or-later",
     "require": {
-        "webflo/drupal-core-strict": "^8",
-        "composer/installers": "^1",
-        "drupal/core": "^8",
-        "drupal-composer/drupal-scaffold": "^2",
-        "drush/drush": "^9",
-        "drupal/console": "^1"
+        "webflo/drupal-core-strict": "*",
+        "composer/installers": "*",
+        "drupal/core": "*",
+        "drupal-composer/drupal-scaffold": "*",
+        "drush/drush": "*",
+        "drupal/console": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -39,6 +39,7 @@
             "libraries/{$name}": ["type:drupal-library"]
         },
         "drupal-scaffold": {
+            "source": "https://git.drupalcode.org/project/drupal/raw/{version}/{path}",
             "initial": {
                 ".htaccess": ".htaccess",
                 "robots.txt": "robots.txt",
