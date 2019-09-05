@@ -8,8 +8,7 @@
         "composer/installers": "*",
         "drupal/core": "*",
         "drupal-composer/drupal-scaffold": "*",
-        "drush/drush": "*",
-        "drupal/console": "*"
+        "drush/drush": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
