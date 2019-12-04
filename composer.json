@@ -1,76 +1,51 @@
 {
     "name": "xandeadx/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "description": "Project template for Drupal projects with composer",
     "type": "project",
     "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
     "require": {
-        "webflo/drupal-core-strict": "*",
-        "composer/installers": "*",
-        "drupal/core": "*",
-        "drupal-composer/drupal-scaffold": "*",
+        "composer/installers": "^1.2",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-project-message": "^8.8",
+        "drupal/core-recommended": "^8.8",
+        "drupal/core-vendor-hardening": "^8.8",
         "drush/drush": "*"
+    },
+    "require-dev": {
+        "drupal/core-dev": "^8.8"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "preferred-install": "dist",
-        "autoloader-suffix": "Drupal8",
-        "optimize-autoloader": true
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
     },
     "extra": {
-        "merge-plugin": {
-            "recurse": true,
-            "replace": false,
-            "merge-extra": false,
-            "include": [
-                "modules/custom/*/composer.json",
-                "modules/sandbox/*/composer.json"
-            ]
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./"
+            }
         },
         "installer-paths": {
             "core": ["type:drupal-core"],
-            "modules/contrib/{$name}": ["type:drupal-module"],
-            "modules/sandbox/{$name}": ["type:drupal-sandbox-module"],
-            "modules/custom/{$name}": ["type:drupal-custom-module"],
+            "libraries/{$name}": ["type:drupal-library"],
             "profiles/{$name}": ["type:drupal-profile"],
+            "modules/contrib/{$name}": ["type:drupal-module"],
+            "modules/custom/{$name}": ["type:drupal-custom-module"],
+            "modules/sandbox/{$name}": ["type:drupal-sandbox-module"],
             "themes/{$name}": ["type:drupal-theme", "type:drupal-custom-theme"],
-            "drush/{$name}": ["type:drupal-drush"],
-            "libraries/{$name}": ["type:drupal-library"]
-        },
-        "drupal-scaffold": {
-            "source": "https://git.drupalcode.org/project/drupal/raw/{version}/{path}",
-            "initial": {
-                ".htaccess": ".htaccess",
-                "robots.txt": "robots.txt",
-                "sites/development.services.yml": "sites/development.services.yml"
-            },
-            "includes": [
-                "modules/README.txt",
-                "profiles/README.txt",
-                "sites/README.txt",
-                "themes/README.txt"
-            ],
-            "excludes": [
-                ".htaccess",
-                "robots.txt",
-                "README.txt",
-                "INSTALL.txt"
-            ]
+            "drush/Commands/{$name}": ["type:drupal-drush"]
         }
-    },
-    "autoload": {
-        "psr-4": {
-            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
-        }
-    },
-    "scripts": {
-        "pre-autoload-dump": "Drupal\\Core\\Composer\\Composer::preAutoloadDump",
-        "post-autoload-dump": "Drupal\\Core\\Composer\\Composer::ensureHtaccess",
-        "post-package-install": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
-        "post-package-update": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
-    },
-    "repositories": [{
-        "type": "composer",
-        "url": "https://packages.drupal.org/8"
-    }]
+    }
 }
