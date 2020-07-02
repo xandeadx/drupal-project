@@ -12,10 +12,10 @@
     ],
     "require": {
         "composer/installers": "^1.9",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9",
-        "drupal/core-vendor-hardening": "^9",
+        "drupal/core-composer-scaffold": "^8",
+        "drupal/core-project-message": "^8",
+        "drupal/core-recommended": "^8",
+        "drupal/core-vendor-hardening": "^8",
         "drush/drush": "*",
         "zaporylie/composer-drupal-optimizations": "*"
     },
